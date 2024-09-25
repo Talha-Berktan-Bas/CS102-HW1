@@ -61,6 +61,22 @@ public class Homework {
         return min;
     }
 
+    public static int[] findAverageSubstractions( int[] arr){
+        int i = arr.length;
+        double sum = 0;
+        for( int j = 0; j < i ; j++){
+            sum = sum + arr[j];
+        }
+        double average = sum / i;
+        int a = (int)Math.round(average);
+        int[] output = new int[i];
+        for( int m = 0 ; m < i ; m++){
+            output[m] = arr[m] - a;
+        }
+
+        return output;
+    }
+
      /**
      * Finds the maximum of the array
      * @param array that going to be checked 
