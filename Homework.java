@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Homework
@@ -6,7 +7,29 @@ import java.util.Random;
 public class Homework {
 
     public static void main(String[] args) {
-        
+        //implements the requested task by the user 
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+       
+        //runs the code unless user write exit 
+        while(! userInput.equalsIgnoreCase("exit")){
+            
+            //display menu
+            System.out.println("Choose your option");
+            System.out.println("1- Find the Min and Max of the array");
+
+            if(userInput.equals("1")){
+
+            }
+            else if(userInput.equals("2")){
+
+            }
+            else if(userInput.equals("3")){
+                
+            }
+            
+            scanner.close();
+        }
     }
 
     /**
