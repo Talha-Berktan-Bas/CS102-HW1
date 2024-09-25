@@ -45,4 +45,35 @@ public class Homework {
         return arr;
         
     }
+
+    /**
+     * Finds the minimum of the array
+     * @param array that going to be checked 
+     * @return min value as integer
+     */
+    public static int findMin(int[]array) {
+        int min = array[0];
+        for(int i = 1; i < array.length; i++){
+            if (array[i]<min) {
+                min = array[i];
+            }
+        }
+        return min;
+    }
+
+     /**
+     * Finds the maximum of the array
+     * @param array that going to be checked 
+     * @return max value as integer
+     */
+    public static int findMax(int[]array) {
+        int max = array[0];
+        for(int i = 1; i < array.length; i++){
+            if (array[i]>max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+    
 }
