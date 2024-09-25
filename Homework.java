@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,27 +10,43 @@ public class Homework {
     public static void main(String[] args) {
         //implements the requested task by the user 
         Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.nextLine();
+        
        
-        //runs the code unless user write exit 
-        while(! userInput.equalsIgnoreCase("exit")){
-            
-            //display menu
-            System.out.println("Choose your option");
-            System.out.println("1- Find the Min and Max of the array");
+        System.out.print("Enter the size of the array: ");
+        int sizeInput = scanner.nextInt();
+        scanner.nextLine();
+        int [] Array = randomArray(sizeInput);
 
+        //runs the code unless user write exit 
+        System.out.println("Choose your option");
+        System.out.println("1- Find the Min and Max of the array\n2- Find the average of the array\n3- Find the sum of elements with odd- and even-numbered indexes");
+        String userInput = scanner.nextLine();
+
+        while(!userInput.equalsIgnoreCase("exit")){
+            
+           
             if(userInput.equals("1")){
+               System.out.println("Min element: " + findMin(Array)) ;
+               System.out.println("Max element: " + findMax(Array)) ;
 
             }
             else if(userInput.equals("2")){
+                System.out.println("Elements - average: " + Arrays.toString(findAverageSubstractions(Array)));
 
             }
             else if(userInput.equals("3")){
                 
+                System.out.println("Sum of evens/Sum of odds: " + Arrays.toString(evenOdd(Array)));
+                
             }
             
-            scanner.close();
+             //display menu
+             System.out.println("Choose your option");
+             System.out.println("1- Find the Min and Max of the array\n2- Find the average of the array\n3- Find the sum of elements with odd- and even-numbered indexes");
+            userInput = scanner.nextLine();
+
         }
+        scanner.close();
     }
 
     /**
